@@ -21,6 +21,7 @@ class CreateCountriesTable extends Migration
             $table->string('code', 2);
             $table->timestamps();
             $table->softDeletes();
+//            $table->enum('status', ['PUBLISHED', 'DRAFT', 'PENDING'])->default('DRAFT');
         });
 
         DB::table('countries')->insert([

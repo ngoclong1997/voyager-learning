@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->integer('release_year');
             $table->unsignedBigInteger('vendor_id');
             $table->unsignedBigInteger('category_id');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->timestamps();
             $table->softDeletes();
         });
